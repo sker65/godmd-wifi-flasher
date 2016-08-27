@@ -6,7 +6,7 @@ Uses the same mechanism like esp-link wiflash cmdline utility, but has a swing /
 
 The two version of a firmware (user1.bin and user2.bin) must be contained in a zip archive, that is then selected by the tool.
 
-##Screenshot
+##Screenshots
 
 <img src="/assets/screen1.jpg?raw=true" width="250"/>
 
