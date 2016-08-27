@@ -8,4 +8,7 @@ The two version of a firmware (user1.bin and user2.bin) must be contained in a z
 
 ##Screenshot
 
-![Screen](/assets/screen0.jpg?raw=true "Main Screen")
+![Screen1](/assets/screen1.jpg?raw=true "Main Screen")
+
+![Screen](/assets/screen0.jpg?raw=true "About Screen")
+
