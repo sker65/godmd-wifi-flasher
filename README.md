@@ -8,7 +8,7 @@ The two version of a firmware (user1.bin and user2.bin) must be contained in a z
 
 ##Screenshot
 
-![screen1](/assets/screen1.jpg?raw=true = 250x)
+<img src="/assets/screen1.jpg?raw=true" width="250"/>
 
-![screen0](/assets/screen0.jpg?raw=true = 250x)
+<img src="/assets/screen0.jpg?raw=true" width="300"/>
 
