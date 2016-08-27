@@ -21,7 +21,7 @@ public class About extends JDialog {
 		super(parent, "About goDMD Flasher", true);
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 451, 264);
+		setBounds(100, 100, 451, 273);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -40,16 +40,16 @@ public class About extends JDialog {
 		contentPane.add(txtpnFlashUtilityFor);
 
 		JButton btnOk = new JButton("Ok");
-		btnOk.setBounds(188, 207, 75, 29);
+		btnOk.setBounds(189, 216, 75, 29);
 		contentPane.add(btnOk);
 		btnOk.addActionListener(e -> {
 			this.setVisible(false);
 			this.dispose();	
 		});
 
-		JLabel lblcreditsToEsplink = new JLabel(
-				"<html>Credits to esp-link (<a href=\"https://github.com/jeelabs/esp-link\">https://github.com/jeelabs/esp-link</a>).<br/>\n\ngoDMD - <a href=\"http://go-dmd.de/\">http://go-dmd.de/</a><br/>\n\n(c) 2016 by Stefan Rinke</html>");
-		lblcreditsToEsplink.setBounds(15, 109, 414, 75);
+		LinkLabel lblcreditsToEsplink = new LinkLabel(
+				"<html>Credits to esp-link (<a href='https://github.com/jeelabs/esp-link'>https://github.com/jeelabs/esp-link</a>).<br/>\n\ngoDMD - <a href='http://go-dmd.de/'>http://go-dmd.de/</a><br/>\n<br/>\nSource code: <a href='https://github.com/sker65/godmd-wifi-flasher/'>https://github.com/sker65/godmd-wifi-flasher/</a><br/>  \n<br/>\n(c) 2016 by Stefan Rinke</html>");
+		lblcreditsToEsplink.setBounds(15, 109, 414, 105);
 		contentPane.add(lblcreditsToEsplink);
 		this.setVisible(true);
 	}
