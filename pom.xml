@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.rinke.solutions.pinball</groupId>
+	<artifactId>godmd-wifi-flasher</artifactId>
+	<version>1.0.1.0</version>
+	<name>godmd-wifi-flasher</name>
+	<description>Tool to flash esp with godmd over the air</description>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<excludeScope>test</excludeScope>
+					<archive>
+						<manifest>
+							<mainClass>com.rinke.solutions.godmd.flash.Flasher</mainClass>
+						</manifest>
+						<!-- manifestEntries> <SplashScreen-Image>images/pin2dmd-splash.png</SplashScreen-Image> 
+							<drone>${env.DRONE_BUILD_NUMBER}</drone> </manifestEntries -->
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.akathist.maven.plugins.launch4j</groupId>
+				<artifactId>launch4j-maven-plugin</artifactId>
+				<version>1.7.8</version>
+				<configuration>
+					<dontWrapJar>false</dontWrapJar>
+					<headerType>gui</headerType>
+					<outfile>target/godmd-wifi-flasher-${project.version}.exe</outfile>
+					<jar>target/godmd-wifi-flasher-${project.version}-jar-with-dependencies.jar</jar>
+					<errTitle>godmd-wifi-flasher</errTitle>
+					<icon>src/main/resources/flasher.ico</icon>
+					<!-- splash> <file>dist/pin2dmd-splash.bmp</file> <waitForWindow>true</waitForWindow> 
+						<timeout>60</timeout> <timeoutErr>true</timeoutErr> </splash -->
+					<classPath>
+						<mainClass>com.rinke.solutions.godmd.flash.Flasher</mainClass>
+						<addDependencies>false</addDependencies>
+						<preCp>anything</preCp>
+					</classPath>
+					<jre>
+						<minVersion>1.8.0</minVersion>
+					</jre>
+					<versionInfo>
+						<fileVersion>${project.version}</fileVersion>
+						<txtFileVersion>${project.version}</txtFileVersion>
+						<fileDescription>Wifi firmware flasher to use with goDMD Clock</fileDescription>
+						<copyright>Rinke Solutions 2016</copyright>
+						<productVersion>${project.version}</productVersion>
+						<txtProductVersion>${project.version}</txtProductVersion>
+						<productName>goDMD wifi firmware flasher</productName>
+						<internalName>wifi-flasher</internalName>
+						<originalFilename>wifi-flasher-${project.version}.exe</originalFilename>
+					</versionInfo>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>
