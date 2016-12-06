@@ -7,13 +7,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import lombok.extern.slf4j.Slf4j;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+@Slf4j
 public class ApplicationProperties {
 	
-	private static Log log = LogFactory.getLog(ApplicationProperties.class);
-
 	private String propertiesFilename = "godmdflash.properties";
 	private static ApplicationProperties theInstance;
 

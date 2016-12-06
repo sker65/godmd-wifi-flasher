@@ -8,4 +8,8 @@ public class Pair<T1, T2> {
 		this.left = left;
 		this.right = right;
 	}
+	@Override
+	public String toString() {
+		return String.format("Pair [left=%s, right=%s]", left, right);
+	}
 }

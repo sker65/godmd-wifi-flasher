@@ -22,12 +22,7 @@ public class CountingHttpEntity extends HttpEntityWrapper {
     }
 
 
-	public static interface ProgressListener {
-        void transferred(long transferedBytes);
-    }
-
-
-    static class CountingOutputStream extends FilterOutputStream {
+	static class CountingOutputStream extends FilterOutputStream {
 
         private final ProgressListener listener;
         private long transferred;

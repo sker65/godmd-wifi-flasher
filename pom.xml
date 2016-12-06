@@ -8,11 +8,39 @@
 	<description>Tool to flash esp with godmd over the air</description>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
-		<dependency>
+ 		 <dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.5.2</version>
+		 </dependency>
+		 
+	     <dependency>
+	         <groupId>org.slf4j</groupId>
+	         <artifactId>slf4j-simple</artifactId>
+	         <version>1.7.9</version>
+	     </dependency>
+
+	     <dependency>
+	         <groupId>org.slf4j</groupId>
+	         <artifactId>log4j-over-slf4j</artifactId>
+	         <version>1.7.9</version>
+	     </dependency>
+         <dependency>
+             <groupId>org.slf4j</groupId>
+             <artifactId>jcl-over-slf4j</artifactId>
+             <version>1.7.9</version>
+         </dependency>
+	    <dependency>
+	        <groupId>org.projectlombok</groupId>
+	        <artifactId>lombok</artifactId>
+	        <version>1.16.10</version>
+	    </dependency>
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.5</version>
 		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>

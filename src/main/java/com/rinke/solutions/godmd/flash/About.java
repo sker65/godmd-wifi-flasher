@@ -36,7 +36,7 @@ public class About extends JDialog {
 		txtpnFlashUtilityFor.setBounds(198, 6, 246, 104);
 		txtpnFlashUtilityFor.setBackground(UIManager.getColor("Button.background"));
 		txtpnFlashUtilityFor.setEditable(false);
-		txtpnFlashUtilityFor.setText("Flash Utility for flashing goDMD Wifi firmware over the air.\n");
+		txtpnFlashUtilityFor.setText("Flash Utility for flashing goDMD Wifi firmware and goDMD Controller firmware over the air.\n");
 		contentPane.add(txtpnFlashUtilityFor);
 
 		JButton btnOk = new JButton("Ok");
